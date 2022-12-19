@@ -36,7 +36,11 @@ const loadSchema = new mongoose.Schema({
   assignedTruck: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Truck'
+  },
+  timestamps: {
+    expires: 0 
   }
+
 });
 
 const Load = mongoose.model('Load', loadSchema);
