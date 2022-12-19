@@ -5,6 +5,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 
 router.post('/', loadsCtrl.create)
+router.get('/', loadsCtrl.index)
 
 
 module.exports = router

@@ -1,129 +1,3 @@
-// import React, { useState } from 'react';
-
-// export default function LoadForm() {
-//   const [formData, setFormData] = useState({
-//     pickupLocation: '',
-//     deliveryLocation: '',
-//     pickupDate: '',
-//     deliveryDate: '',
-//     cargoType: '',
-//     weight: 0,
-//     rate: 0,
-//     available: true,
-//     assignedTruck: null
-//   });
-
-//   const handleChange = event => {
-//     setFormData({
-//       ...formData,
-//       [event.target.name]: event.target.value
-//     });
-//   };
-
-//   const handleSubmit = event => {
-//     event.preventDefault();
-//     const createLoad = async () => {
-//       try {
-//         // Make the API call to create the load
-//         const response = await fetch('/api/loads', {
-//           method: 'POST',
-//           body: JSON.stringify(formData),
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//         });
-//         // Do something with the response (e.g. display a success message)
-//       } catch (error) {
-//         // Handle the error (e.g. display an error message)
-//       }
-//     };
-//     createLoad();
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label>
-//         User:
-//         <input
-//           type="text"
-//           name="user"
-//           value={formData.user}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <label>
-//         Origin:
-//         <input
-//           type="text"
-//           name="origin"
-//           value={formData.origin}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <label>
-//         Destination:
-//         <input
-//           type="text"
-//           name="destination"
-//           value={formData.destination}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <label>
-//         Truck:
-//         <input
-//           type="text"
-//           name="truck"
-//           value={formData.truck}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <label>
-//         Status:
-//         <input
-//           type="text"
-//           name="status"
-//           value={formData.status}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <label>
-//         Pickup Date:
-//         <input
-//           type="text"
-//           name="pickupDate"
-//           value={formData.pickupDate}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <label>
-//         Delivery Date:
-//         <input
-//           type="text"
-//           name="deliveryDate"
-//           value={formData.deliveryDate}
-//           onChange={handleChange}
-//           required
-//         />
-//       </label>
-//       <br />
-//       <button type="submit">Submit</button>
-//     </form>
-//     )
-//     }
-
 import React, { useState } from 'react';
 
 export default function LoadForm() {
@@ -161,6 +35,7 @@ export default function LoadForm() {
         // Do something with the response (e.g. display a success message)
       } catch (error) {
         // Handle the error (e.g. display an error message)
+        console.log(error)
       }
     };
     createLoad();
@@ -245,6 +120,16 @@ export default function LoadForm() {
         />
       </label>
       <br />
+      <label>
+         Available:
+        <input
+        type="checkbox"
+        name="available"
+        checked={formData.available}
+        onChange={event => setFormData({ ...formData, available: event.target.checked })}
+        />
+        </label>
+        
       <button type="submit">Submit</button></form>
       )}
 
