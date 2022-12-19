@@ -3,17 +3,38 @@ import { Link } from "react-router-dom"
 export default function LoadItem({loadItem}) {
 
 
-  return (
-    <ul>
-      
-        <li >
-          <Link to={loadItem._id}><h3>{loadItem.pickupLocation} to {loadItem.deliveryLocation}</h3></Link>
-          <p>Pickup Date: {loadItem.pickupDate}</p>
-          <p>Delivery Date: {loadItem.deliveryDate}</p>
-          <p>Cargo Type: {loadItem.cargoType}</p>
-          <p>Weight: {loadItem.weight}</p>
-          <p>Rate: {loadItem.rate}</p>
-          <p>Available: {loadItem.available}</p></li>
-          </ul>
+
+  return(
+  <div class="load-item">
+  <h2>{loadItem.pickupLocation} to {loadItem.deliveryLocation}</h2>
+  <div class="load-details">
+    <div class="detail">
+      <p class="label">Pickup Date:</p>
+      <p class="value">{loadItem.pickupDate}</p>
+    </div>
+    <div class="detail">
+      <p class="label">Delivery Date:</p>
+      <p class="value">{loadItem.deliveryDate}</p>
+    </div>
+    <div class="detail">
+      <p class="label">Cargo Type:</p>
+      <p class="value">{loadItem.cargoType}</p>
+    </div>
+    <div class="detail">
+      <p class="label">Weight:</p>
+      <p class="value">{loadItem.weight}</p>
+    </div>
+    <div class="detail">
+      <p class="label">Rate:</p>
+      <p class="value">{loadItem.rate}</p>
+    </div>
+    <div class="detail">
+      <p class="label">Available:</p>
+      <p class="value">{loadItem.available}</p>
+    </div>
+  </div>
+</div>
+
+
   )
 }
