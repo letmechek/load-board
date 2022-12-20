@@ -1,3 +1,5 @@
+import './LoadItem.css'
+
 import { Link } from "react-router-dom"
 
 export default function LoadItem({loadItem}) {
@@ -6,7 +8,7 @@ export default function LoadItem({loadItem}) {
 
   return(
   <div class="load-item">
-  <h2>{loadItem.pickupLocation} to {loadItem.deliveryLocation}</h2>
+  <Link to={loadItem._id}><h2>{loadItem.pickupLocation} to {loadItem.deliveryLocation}</h2></Link>
   <div class="load-details">
     <div class="detail">
       <p class="label">Pickup Date:</p>

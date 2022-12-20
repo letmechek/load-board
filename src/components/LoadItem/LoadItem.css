@@ -1,0 +1,51 @@
+.load-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .load-item h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .load-item a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .load-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .load-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .load-details .detail {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .load-details .label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #555;
+  }
+  
+  .load-details .value {
+    font-style: italic;
+    color: #888;
+  }
+  
+  
