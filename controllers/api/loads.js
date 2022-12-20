@@ -18,9 +18,7 @@ module.exports = {
   }
 }
 async function index (req, res) {
-    const load = await Load.find({}).sort('name').populate().exec()
-    
-
+    const load = await Load.find({}).sort({createdAt: -1})
     res.json(load);
   }
 

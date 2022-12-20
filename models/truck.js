@@ -12,24 +12,36 @@ const TruckSchema = new Schema({
     },
     make: {
         type: String,
-        required: true
+        // required: true
     },
     model: {
         type: String,
-        required: true
+        // required: true
     },
     year: {
         type: Number,
-        required: true
+        // required: true
     },
     maxCapacity: {
         type: Number,
-        required: true
+        // required: true
     },
     availableCapacity: {
         type: Number,
-        required: true
-    }
+        // required: true
+    },
+    cargoType: {
+        type: String,
+        // required: true
+      },
+    
+    timestamps: {
+      expires: 0 
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
 });
 
 

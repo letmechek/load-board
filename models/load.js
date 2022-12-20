@@ -39,7 +39,11 @@ const loadSchema = new mongoose.Schema({
   },
   timestamps: {
     expires: 0 
-  }
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 
 });
 

@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoadForm() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     pickupLocation: '',
     deliveryLocation: '',
@@ -24,7 +26,7 @@ export default function LoadForm() {
     event.preventDefault();
     const createLoad = async () => {
       try {
-        // Make the API call to create the load
+       
         const response = await fetch('/api/loads', {
           method: 'POST',
           body: JSON.stringify(formData),
@@ -32,9 +34,9 @@ export default function LoadForm() {
             'Content-Type': 'application/json',
           },
         });
-        // Do something with the response (e.g. display a success message)
+        navigate('/loads')
       } catch (error) {
-        // Handle the error (e.g. display an error message)
+       
         console.log(error)
       }
     };
